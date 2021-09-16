@@ -22,7 +22,9 @@ class Main {
       System.out.println(firstNum / secondNum);
      } else{
       System.out.println("That is not an acceptable problem type, restart the program and retype the problem type");
-      
+     }
+    }
+   }
     
     
    
