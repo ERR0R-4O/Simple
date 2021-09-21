@@ -1,21 +1,22 @@
 import math
 
 def calc():
-  numOne = int(input("What is the first number of your problem?"))
-  numTwo = int(input("What is the second number of your problem?"))
-  numThree = input("What type of Math Problem is it, Addition, Subtraction, Multiplication, Division, Remainder, Exponents, or Factorials? Type exactly.")
+  numOne = int(input("What is the first number of your problem?(x)"))
+  numTwo = int(input("What is the second number of your problem?(y)"))
+  numThree = input("Please type code for any following function: AD for Addition, SUB for Subtraction, MUL for Multiplication, DIV for Division, LOG for Base 10 LOG, EX for Exponents, MOD for Modulo")
 
-  if numThree == 'Addition':
+  if numThree == 'AD':
     print(numOne + numTwo)
-  elif numThree == 'Subtraction':
+  elif numThree == 'SUB':
     print(numOne - numTwo)
-  elif numThree == 'Multiplication':
+  elif numThree == 'MUL':
    print(numOne * numTwo)
-  elif numThree == 'Division':
+  elif numThree == 'DIV':
     print(numOne / numThree)
-  elif numThree == 'Remainder':
-    print(numOne % numTwo)
-  elif numThree == 'Exponents':
+  elif numThree == 'LOG':
+    logb10=math.log10(x)
+    print(logb10)
+  elif numThree == 'EX':
     print(numOne ** numTwo)
   elif numThree == 'Factorials':
     thing = input("Which number do you want to use, the first or second? Type 1 for the first one or 2 for the second.")
@@ -26,7 +27,19 @@ def calc():
     else:
       print("Not acceptable format. Wait for the program to restart and run again.")
   else:
-    print("Not acceptable format. Wait for program restart and try again")
+    print("Please enter on of the above functions. ")
 
 while True:
   calc()
+  
+  repeat()
+  
+  def repeat():
+    repeat_program=input('''Do you want to calculate again, Yes or No?''')
+    
+    if repeat_program == 'Yes':
+        calculate()
+    elif repeat_program == 'No':
+        print('Thanks for using my calculator.')
+    else:
+        again()
