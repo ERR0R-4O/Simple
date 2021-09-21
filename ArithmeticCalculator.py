@@ -1,3 +1,5 @@
+import math
+
 def calc():
   numOne = int(input("What is the first number of your problem?(x)"))
   numTwo = int(input("What is the second number of your problem?(y)"))
@@ -16,8 +18,17 @@ def calc():
     print(logb10)
   elif numThree == 'EX':
     print(numOne ** numTwo)
+  elif numThree == 'Factorials':
+    thing = input("Which number do you want to use, the first or second? Type 1 for the first one or 2 for the second.")
+    if thing == '1':
+      print(math.factorial(numOne))
+    elif thing == '2':
+      print(math.factorial(numTwo))
+    else:
+      print("Not acceptable format. Wait for the program to restart and run again.")
   else:
     print("Please enter on of the above functions. ")
+
 while True:
   calc()
   
@@ -26,9 +37,9 @@ while True:
   def repeat():
     repeat_program=input('''Do you want to calculate again, Yes or No?''')
     
-    if calc_again.upper() == 'Yes':
+    if repeat_program == 'Yes':
         calculate()
-    elif calc_again.upper() == 'No':
+    elif repeat_program == 'No':
         print('Thanks for using my calculator.')
     else:
         again()
